@@ -1,0 +1,11 @@
+Options -MultiViews
+
+RewriteEngine on
+
+#RewriteBase /mymvc/public
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.+)$ index.php?url=$1
+#RewriteRule ^([A-Za-z0-9]+)/(url|output|fall|spring) index.php?url=$1&output=$2 [QSA]

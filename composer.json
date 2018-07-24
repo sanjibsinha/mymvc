@@ -1,0 +1,16 @@
+{   
+"autoload": {
+    
+    "psr-4": {
+        "App\\": "src/",
+        "Controller\\": "src/controllers",
+        "Karnel\\": "src/karnel",
+        "Layout\\": "src/karnel/layout",
+        "Database\\": "src/karnel/database",
+        "Model\\": "src/models",
+        "View\\": "src/views"
+        
+    }
+        
+    }
+}
