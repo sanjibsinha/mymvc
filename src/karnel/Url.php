@@ -1,5 +1,6 @@
 <?php
 namespace Karnel;
+use Controller\Home as Home;
 
 /* 
  * This Karnel URL class defines the types of our framework app object
@@ -24,13 +25,13 @@ class Url
         
         require_once '../src/controllers/' . $this->controller . '.php';
         
-        $this->controller = new \Controller\Home();
+        $this->controller = new Home;
         
-        $url[1] = "";
-        
-        if(method_exists($this->controller, $url[1])){
-            $this->method = $url[1];
-            unset($url[1]);
+        if (isset($url[1])){
+            if(method_exists($this->controller, $url[1])){
+                $this->method = $url[1];
+                unset($url[1]);
+            }            
         }
         
         $this->args = $url? array_values($url): [];

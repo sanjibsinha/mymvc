@@ -1,18 +1,32 @@
 <?php namespace Database;
 
-class Database
+class Database extends DBConfig
 {
-    public $db;
     public $id;
+
     public function getDB($id) {
+        
         $this->id = $id;
-        $this->db = new \PDO('mysql:host=localhost;dbname=mymvc', 'root', 'Sanjib@100');
-        $this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-        $stmt = $this->db->prepare("SELECT name FROM users WHERE id={$id}");
-        $stmt->execute();
-// set the resulting array to associative
-    $result = $stmt->setFetchMode(\PDO::FETCH_ASSOC);
-    return $result;
+        
+        $dsn= "mysql:host=$this->host;dbname=$this->db";
+        $conn = new \PDO($dsn, $this->username, $this->password);
+        
+        try{
+            if($conn){
+                $statement = "SELECT * FROM users WHERE id={$id}";
+                $result = $conn->query($statement);
+                 if($result === false){
+                     die("Error executing the query: $statement");                     
+                 }
+                 while ($row = $result->fetch(\PDO::FETCH_ASSOC)) {
+                     $name = htmlspecialchars($row['name']);
+                     return $name;
+                 }
+                 
+             }
+        } catch (\PDOException $e){
+            echo $e->getMessage();
+        }
         
     }
 }
