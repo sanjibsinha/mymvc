@@ -1,2 +1,2 @@
 # mymvc
-A Simple PHP framework from scratch
+A Simple PHP framework with PDO support
