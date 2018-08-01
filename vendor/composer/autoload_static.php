@@ -21,7 +21,7 @@ class ComposerStaticInit0122b5e813865dfdf8ab41200764dc59
         ),
         'K' => 
         array (
-            'Karnel\\' => 7,
+            'Kernel\\' => 7,
         ),
         'D' => 
         array (
@@ -48,15 +48,15 @@ class ComposerStaticInit0122b5e813865dfdf8ab41200764dc59
         ),
         'Layout\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/karnel/layout',
+            0 => __DIR__ . '/../..' . '/src/kernel/layout',
         ),
-        'Karnel\\' => 
+        'Kernel\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/karnel',
+            0 => __DIR__ . '/../..' . '/src/kernel',
         ),
         'Database\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src/karnel/database',
+            0 => __DIR__ . '/../..' . '/src/kernel/database',
         ),
         'Controller\\' => 
         array (

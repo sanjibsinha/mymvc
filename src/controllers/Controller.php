@@ -1,7 +1,7 @@
 <?php namespace Controller;
 
 use Model\User as User;
-use Karnel\View as View;
+use Kernel\View as View;
 use Layout\Header as Header;
 use Layout\Footer as Footer;
 

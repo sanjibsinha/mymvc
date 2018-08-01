@@ -1,6 +1,6 @@
-<?php namespace Karnel;
+<?php namespace Kernel;
 
-use Karnel\Url as Url;
+use Kernel\Url as Url;
 
 class App
 {

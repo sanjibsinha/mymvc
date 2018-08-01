@@ -1,5 +1,5 @@
 <?php
 require_once '../vendor/autoload.php';
 
-use Karnel\Error as Error;
+use Kernel\Error as Error;
 $error = new Error;

@@ -8,9 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'View\\' => array($baseDir . '/src/views'),
     'Model\\' => array($baseDir . '/src/models'),
-    'Layout\\' => array($baseDir . '/src/karnel/layout'),
-    'Karnel\\' => array($baseDir . '/src/karnel'),
-    'Database\\' => array($baseDir . '/src/karnel/database'),
+    'Layout\\' => array($baseDir . '/src/kernel/layout'),
+    'Kernel\\' => array($baseDir . '/src/kernel'),
+    'Database\\' => array($baseDir . '/src/kernel/database'),
     'Controller\\' => array($baseDir . '/src/controllers'),
     'App\\' => array($baseDir . '/src'),
 );

@@ -1,12 +1,11 @@
 <?php
-namespace Karnel;
-use Controller\Home as Home;
+namespace Kernel;
 
 /* 
- * This Karnel URL class defines the types of our framework app object
+ * This Kernel Apply class defines the types of our framework app object
  */
 
-class Url
+class Apply
 {
     protected $controller = 'home';
     protected $method = 'index';
@@ -15,6 +14,8 @@ class Url
     public function __construct() {
         
         $url = $this->parsingURL();
+        
+        //print_r($url);
         
         $filename = '../src/controllers/' . $url[0] . '.php';
         
@@ -25,13 +26,11 @@ class Url
         
         require_once '../src/controllers/' . $this->controller . '.php';
         
-        $this->controller = new Home;
+        $this->controller = new \Controller\Home();
         
-        if (isset($url[1])){
-            if(method_exists($this->controller, $url[1])){
-                $this->method = $url[1];
-                unset($url[1]);
-            }            
+        if(method_exists($this->controller, $url[1])){
+            $this->method = $url[1];
+            unset($url[1]);
         }
         
         $this->args = $url? array_values($url): [];

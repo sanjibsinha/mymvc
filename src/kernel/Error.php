@@ -1,4 +1,4 @@
-<?php namespace Karnel;
+<?php namespace Kernel;
 
 /* 
  * To display PHP errors on evry page
