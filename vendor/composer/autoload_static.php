@@ -30,6 +30,11 @@ class ComposerStaticInit0122b5e813865dfdf8ab41200764dc59
         'C' => 
         array (
             'Controller\\' => 11,
+            'Contracts\\' => 10,
+        ),
+        'B' => 
+        array (
+            'Behave\\' => 7,
         ),
         'A' => 
         array (
@@ -61,6 +66,14 @@ class ComposerStaticInit0122b5e813865dfdf8ab41200764dc59
         'Controller\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/controllers',
+        ),
+        'Contracts\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/contracts',
+        ),
+        'Behave\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/behaviours',
         ),
         'App\\' => 
         array (

@@ -12,5 +12,7 @@ return array(
     'Kernel\\' => array($baseDir . '/src/kernel'),
     'Database\\' => array($baseDir . '/src/kernel/database'),
     'Controller\\' => array($baseDir . '/src/controllers'),
+    'Contracts\\' => array($baseDir . '/src/contracts'),
+    'Behave\\' => array($baseDir . '/src/behaviours'),
     'App\\' => array($baseDir . '/src'),
 );

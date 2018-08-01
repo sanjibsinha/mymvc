@@ -1,13 +1,16 @@
 <?php
 namespace Kernel;
 use Controller\Home as Home;
+use Contracts\ParsingUrlInterface as ParsingUrlInterface;
 
 /* 
  * This Karnel URL class defines the types of our framework app object
  */
 
-class Url
+class Url implements ParsingUrlInterface
 {
+    use \Behave\CheckingBehaviours;
+    
     protected $controller = 'home';
     protected $method = 'index';
     protected $args = [];

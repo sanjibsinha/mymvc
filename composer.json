@@ -3,6 +3,8 @@
     
     "psr-4": {
         "App\\": "src/",
+        "Contracts\\": "src/contracts",
+        "Behave\\": "src/behaviours",
         "Controller\\": "src/controllers",
         "Kernel\\": "src/kernel",
         "Layout\\": "src/kernel/layout",
